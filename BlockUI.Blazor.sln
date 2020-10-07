@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{51976A78-3C01-412A-81B5-39752C8F5CC3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{3868B8AF-4868-4CC2-ACCE-E83A47DBA29B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockUI.Blazor.Demo", "Code\BlockUI.Blazor.Demo\BlockUI.Blazor.Demo.csproj", "{2AE6D613-993B-4ABA-AD1C-6BA91F051EEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AE6D613-993B-4ABA-AD1C-6BA91F051EEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AE6D613-993B-4ABA-AD1C-6BA91F051EEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AE6D613-993B-4ABA-AD1C-6BA91F051EEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AE6D613-993B-4ABA-AD1C-6BA91F051EEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2AE6D613-993B-4ABA-AD1C-6BA91F051EEE} = {3868B8AF-4868-4CC2-ACCE-E83A47DBA29B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1D4F34E-5FD5-4755-8AD1-FE541F900053}
+	EndGlobalSection
+EndGlobal
