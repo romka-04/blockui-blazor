@@ -1,0 +1,37 @@
+﻿@inject IBlockUserInterfaceService Service
+<div id="@Service.ElementId">
+    <h3>BlockUserInterface-dddd</h3>
+    @ChildContent
+</div>
+
+@code {
+    private string _elementId = $"BlockUI-{Guid.NewGuid():N}";
+    private bool _block = false;
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    //protected override void OnInitialized()
+    //{
+    //    Service.OnBlock   += BlockUI;
+    //    Service.OnUnblock += UnblockUI;
+    //}
+
+    //private void BlockUI(object obj)
+    //{
+    //    var task = jsRuntime.InvokeAsync<object>(
+    //        "blockUserInterfaceWrapper.block",
+    //        _elementId
+    //    ).AsTask();
+    //    Task.WaitAll(task);
+    //}
+
+    //private void UnblockUI(object obj)
+    //{
+    //    var task = jsRuntime.InvokeAsync<object>(
+    //        "blockUserInterfaceWrapper.unblock",
+    //        _elementId
+    //        ).AsTask();
+    //    Task.WaitAll(task);
+    //}
+}
