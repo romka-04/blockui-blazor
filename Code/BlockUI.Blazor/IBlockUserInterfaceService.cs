@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.AspNetCore.Components;
 
 namespace BlockUI.Blazor
 {
@@ -19,13 +20,35 @@ namespace BlockUI.Blazor
         string ElementId { get; }
 
         /// <summary>
-        /// Blocks a part of the window.
+        /// Blocks a part of the page.
         /// </summary>
-        void Block();
+        /// <param name="message"></param>
+        void Block(string message = null);
 
         /// <summary>
-        /// Unblocks a part of the window.
+        /// Blocks a part of the using DOM element of a page as display message.
+        /// </summary>
+        /// <param name="elementName">The name of <see cref="BlockUserInterfaceMessage"/> element.</param>
+        void BlockWithDomElement(string elementName);
+
+        /// <summary>
+        /// Unblocks a part of the page.
         /// </summary>
         void Unblock();
+
+        /// <summary>
+        /// Blocks the whole page.
+        /// </summary>
+        void BlockPage(string message = null);
+
+        /// <summary>
+        /// Blocks the whole page using DOM element of a page as display message.
+        /// </summary>
+        void BlockPageWithDomElement(string elementName);
+
+        /// <summary>
+        /// Unblocks the whole page.
+        /// </summary>
+        void UnblockPage();
     }
 }

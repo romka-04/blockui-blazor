@@ -14,7 +14,9 @@ namespace BlockUI.Blazor
         {
             if (null == services) throw new ArgumentNullException(nameof(services));
 
-            return services.AddScoped<IBlockUserInterfaceService, BlockUserInterfaceService>();
+            return services
+                .AddScoped<IBlockUserInterfaceService, BlockUserInterfaceService>()
+                .AddScoped<IBlockInternalService, BlockInternalService>();
         }
     }
 }

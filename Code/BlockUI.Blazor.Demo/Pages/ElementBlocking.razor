@@ -1,0 +1,60 @@
+﻿@page "/element"
+
+@inject IBlockUserInterfaceService BlockService
+
+<button class="btn btn-primary" type="button" @onclick="() => BlockService.Unblock()">Unblock</button>
+<button class="btn btn-primary" type="button" @onclick="DefaultMessage">Default Message</button>
+<button class="btn btn-primary" type="button" @onclick="CustomMessage">Custom Message</button>
+<button class="btn btn-primary" type="button" @onclick="DomElementMessage">DOM Element as Message</button>
+
+<br />
+
+<BlockUserInterface>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+</BlockUserInterface>
+
+@code {
+    private void DefaultMessage()
+    {
+        BlockService.Block();
+    }
+
+    private void CustomMessage()
+    {
+        BlockService.Block("<h3><i class=\"fa fa-refresh fa-spin \"></i> Just a moment...</h3>");
+    }
+
+    private void DomElementMessage()
+    {
+        BlockService.BlockWithDomElement("main");
+    }
+}

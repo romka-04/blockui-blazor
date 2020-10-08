@@ -10,28 +10,4 @@
 
     [Parameter]
     public RenderFragment ChildContent { get; set; }
-
-    //protected override void OnInitialized()
-    //{
-    //    Service.OnBlock   += BlockUI;
-    //    Service.OnUnblock += UnblockUI;
-    //}
-
-    //private void BlockUI(object obj)
-    //{
-    //    var task = jsRuntime.InvokeAsync<object>(
-    //        "blockUserInterfaceWrapper.block",
-    //        _elementId
-    //    ).AsTask();
-    //    Task.WaitAll(task);
-    //}
-
-    //private void UnblockUI(object obj)
-    //{
-    //    var task = jsRuntime.InvokeAsync<object>(
-    //        "blockUserInterfaceWrapper.unblock",
-    //        _elementId
-    //        ).AsTask();
-    //    Task.WaitAll(task);
-    //}
 }

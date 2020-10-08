@@ -1,0 +1,26 @@
+﻿@page "/page"
+@inject IBlockUserInterfaceService BlockService
+
+<button class="btn btn-primary" type="button" @onclick="DefaultMessage">Default Message</button>
+<button class="btn btn-primary" type="button" @onclick="CustomMessage">Custom Message</button>
+<button class="btn btn-primary" type="button" @onclick="DomElementMessage">DOM Element as Message</button>
+
+<br/>
+
+@code {
+
+    private void DefaultMessage()
+    {
+        BlockService.BlockPage();
+    }
+
+    private void CustomMessage()
+    {
+        BlockService.BlockPage("<h1><img src=\"busy.gif\" /> Just a moment...</h1>");
+    }
+
+    private void DomElementMessage()
+    {
+        BlockService.BlockPageWithDomElement("main");
+    }
+}
