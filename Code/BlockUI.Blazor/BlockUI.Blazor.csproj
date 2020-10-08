@@ -3,6 +3,17 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
+    <Authors>Roman Chernobrovkin</Authors>
+    <Version>1.0.0-alpha</Version>
+    <Company />
+    <Description>Blazor Component wrapper for BlockUI plugin</Description>
+    <PackageProjectUrl>https://github.com/romka-04/blockui-blazor</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/romka-04/blockui-blazor</RepositoryUrl>
+    <PackageTags>blockUI;Blazor;malsup;</PackageTags>
+    <PackageReleaseNotes>Basic functionality.</PackageReleaseNotes>
+    <FileVersion>1.0.0.1</FileVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
 
@@ -16,6 +27,14 @@
     <Content Update="wwwroot\jquery.blockUI.min.js">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
