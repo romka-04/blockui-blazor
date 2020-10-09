@@ -1,2 +1,7 @@
 # blockui-blazor
-Blazor Component wrapper for BlockUI plugin
+
+Blazor Component wrapper for jQuery BlockUI plugin (http://jquery.malsup.com/block/).
+
+## TODO ##
+
+* Write short documentation.

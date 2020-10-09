@@ -7,9 +7,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{51976A78-3C0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{3868B8AF-4868-4CC2-ACCE-E83A47DBA29B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockUI.Blazor.Demo", "Code\BlockUI.Blazor.Demo\BlockUI.Blazor.Demo.csproj", "{2AE6D613-993B-4ABA-AD1C-6BA91F051EEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlockUI.Blazor.Demo", "Code\BlockUI.Blazor.Demo\BlockUI.Blazor.Demo.csproj", "{2AE6D613-993B-4ABA-AD1C-6BA91F051EEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockUI.Blazor", "Code\BlockUI.Blazor\BlockUI.Blazor.csproj", "{2C1674CD-9DD4-4B19-BEA0-03A69AC87B8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlockUI.Blazor", "Code\BlockUI.Blazor\BlockUI.Blazor.csproj", "{2C1674CD-9DD4-4B19-BEA0-03A69AC87B8D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{17F8D17C-FF79-4224-9A05-3C14D53F248F}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

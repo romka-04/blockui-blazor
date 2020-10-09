@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.JSInterop;
 
-namespace BlockUI.Blazor
+namespace BlockUI.Blazor.Services
 {
     class BlockUserInterfaceService 
         : IBlockUserInterfaceService

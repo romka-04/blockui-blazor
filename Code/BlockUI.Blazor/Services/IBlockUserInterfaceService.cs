@@ -1,7 +1,6 @@
 ﻿using System;
-using Microsoft.AspNetCore.Components;
 
-namespace BlockUI.Blazor
+namespace BlockUI.Blazor.Services
 {
     public interface IBlockUserInterfaceService
     {
