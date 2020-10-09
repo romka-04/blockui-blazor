@@ -1,4 +1,5 @@
 ﻿using System;
+using BlockUI.Blazor.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BlockUI.Blazor

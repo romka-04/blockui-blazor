@@ -1,0 +1,9 @@
+[
+  {
+    "outputFileName": "wwwroot/jquery.blockUI.Blazor.min.js",
+    "inputFiles": [
+      "wwwroot/jquery.blockUI.Blazor.js",
+      "wwwroot/jquery.blockUI.min.js"
+    ]
+  }
+]

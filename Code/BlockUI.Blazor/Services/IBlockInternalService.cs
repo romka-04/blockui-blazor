@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BlockUI.Blazor
+namespace BlockUI.Blazor.Services
 {
     public interface IBlockInternalService
     {
