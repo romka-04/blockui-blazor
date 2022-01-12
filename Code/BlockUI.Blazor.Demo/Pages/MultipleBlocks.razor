@@ -1,0 +1,101 @@
+﻿@page "/multiple-blocks"
+@using BlockUI.Blazor.Services
+
+<div class="row">
+    <div class="col">
+        <button class="btn btn-primary" type="button" @onclick="BlockPage">Block Page for 3 sec</button>
+        <button class="btn btn-primary" type="button" @onclick="BlockAll">Block All Elements</button>
+        <button class="btn btn-primary" type="button" @onclick="UnblockAll">Unblock All Elements</button>
+    </div>
+    <div class="col-12"><br/></div>
+    <div class="col">
+        <button class="btn btn-primary" type="button" @onclick="Block1">Block Elem 1</button>
+        <button class="btn btn-primary" type="button" @onclick="Unblock1">Unblock Elem 1</button>
+    </div>
+    <div class="col-12"></div>
+</div>
+<br/>
+<BlockUserInterface @ref="_block1">
+    <div class="row">
+        <div class="col">
+            <div id="multiCollapseExample1">
+                <div class="card card-body">
+                    Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+            </div>
+        </div>
+    </div>
+</BlockUserInterface>
+<br/>
+<div class="row">
+    <div class="col-12"></div>
+    <div class="col">
+        <button class="btn btn-primary" type="button" @onclick="Block2">Block Elem 2</button>
+        <button class="btn btn-primary" type="button" @onclick="Unblock2">Unblock Elem 2</button>
+    </div>
+    <div class="col-12"></div>
+</div>
+<br/>
+<BlockUserInterface ElementId="Elem12345">
+    <div class="row">
+        <div class="col">
+            <div id="multiCollapseExample2">
+                <div class="card card-body">
+                    Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                </div>
+            </div>
+        </div>
+    </div>
+</BlockUserInterface>
+<br/>
+
+@code {
+    private BlockUserInterface _block1;
+
+    [Inject]
+    public IBlockUserInterfaceService BlockService { get; set; }
+
+    private async Task BlockPage()
+    {
+        var t1 = BlockService.BlockPage();
+        var t2 = Task.Run(async () =>
+        {
+            // wait 3 sec
+            await Task.Delay(TimeSpan.FromSeconds(3));
+            // unblock
+            await BlockService.UnblockPage();
+        });
+        await Task.WhenAny(t1, t2);
+    }
+
+    private async Task BlockAll()
+    {
+        await BlockService.Block();
+    }
+    
+    private async Task UnblockAll()
+    {
+        await BlockService.Unblock();
+    }
+    
+    private Task Block1()
+    {
+        return BlockService.BlockElement(_block1, "loading 1");
+    }
+    private Task Unblock1()
+    {
+        return BlockService.Unblock(_block1);
+    }
+    
+    private Task Block2()
+    {
+        BlockService.BlockElement("Elem12345", "loading 2");
+        return Task.CompletedTask;
+    }
+    private Task Unblock2()
+    {
+        BlockService.Unblock("Elem12345");
+        return Task.CompletedTask;
+    }
+
+}

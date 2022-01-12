@@ -16,4 +16,12 @@
     <ProjectReference Include="..\BlockUI.Blazor\BlockUI.Blazor.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\MultipleBlocks.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\MultipleBlocks.razor" />
+  </ItemGroup>
+
 </Project>

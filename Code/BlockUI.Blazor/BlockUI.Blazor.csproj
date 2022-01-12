@@ -4,14 +4,14 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
     <Authors>Roman Chernobrovkin</Authors>
-    <Version>1.0.0</Version>
+    <Version>2.0.0-alpha</Version>
     <Company />
     <Description>Blazor Component wrapper for BlockUI plugin</Description>
     <PackageProjectUrl>https://github.com/romka-04/blockui-blazor</PackageProjectUrl>
     <RepositoryUrl>https://github.com/romka-04/blockui-blazor</RepositoryUrl>
     <PackageTags>blockUI;Blazor;malsup;</PackageTags>
-    <PackageReleaseNotes>Basic functionality.</PackageReleaseNotes>
-    <FileVersion>1.0.0.2</FileVersion>
+    <PackageReleaseNotes>Breaking change in interface due to transition to async interaction model.</PackageReleaseNotes>
+    <FileVersion>2.0.0.1</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>

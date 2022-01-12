@@ -1,13 +1,37 @@
 ﻿@using BlockUI.Blazor.Services
-@inject IBlockUserInterfaceService Service
-<div id="@Service.ElementId">
+@inject IBlockUserInterfaceService _service
+@inject IIdentityPool _identityPool
+
+<div id="@ElementId">
     @ChildContent
 </div>
 
 @code {
-    private string _elementId = $"BlockUI-{Guid.NewGuid():N}";
+    private string _elementId;
     private bool _block = false;
+
+    /// <summary>
+    /// Gets or sets unique ID of the DOM element that is used to block screen.
+    /// </summary>
+    [Parameter]
+    public string ElementId
+    {
+        get => _elementId ?? (_elementId = CreateNewElementId());
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                throw new ArgumentNullException(nameof(value), $"{nameof(ElementId)}");
+            _elementId = value;
+            _identityPool.Add(_elementId);
+        }
+    }
 
     [Parameter]
     public RenderFragment ChildContent { get; set; }
+
+    private string CreateNewElementId()
+    {
+        return _identityPool.CreateNew();
+    }
+
 }
