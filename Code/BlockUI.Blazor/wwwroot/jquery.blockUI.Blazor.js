@@ -2,7 +2,7 @@ window.blockUserInterfaceWrapper = {
     block: function (elementId, message) {
         var elem = document.getElementById(elementId);
         if (!elem) {
-            throw new Error('No element with ID ' + elementId);
+            return;
         }
 
         if (message)
@@ -14,7 +14,7 @@ window.blockUserInterfaceWrapper = {
         var elem = document.getElementById(elementId);
         var msgElem = document.getElementById(messageElementId);
         if (!elem) {
-            throw new Error('No element with ID ' + elementId);
+            return;
         }
         if (!msgElem) {
             throw new Error('No element with ID ' + messageElementId);
@@ -25,7 +25,7 @@ window.blockUserInterfaceWrapper = {
     unblock: function (elementId) {
         var elem = document.getElementById(elementId);
         if (!elem) {
-            throw new Error('No element with ID ' + elementId);
+            return;
         }
 
         $(elem).unblock();
